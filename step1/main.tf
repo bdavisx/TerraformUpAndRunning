@@ -76,7 +76,7 @@ resource "aws_security_group" "bd-elb-example-security-group" {
 }
 
 resource "aws_elb" "bd-example-elastic-load-balancer" {
-  name               = "terraform-asg-example"
+  name               = "bill-davis-elb-example"
   availability_zones = ["${data.aws_availability_zones.all.names}"]
   security_groups    = ["${aws_security_group.bd-elb-example-security-group.id}"]
 
