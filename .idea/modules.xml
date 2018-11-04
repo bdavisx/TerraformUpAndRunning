@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ecs-playground/ecs-playground.iml" filepath="$PROJECT_DIR$/ecs-playground/ecs-playground.iml" />
       <module fileurl="file://$PROJECT_DIR$/step1/step1.iml" filepath="$PROJECT_DIR$/step1/step1.iml" />
     </modules>
   </component>

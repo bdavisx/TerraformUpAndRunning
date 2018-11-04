@@ -1,0 +1,15 @@
+[
+  {
+    "name": "hello-world-web-app",
+    "image": "382602106037.dkr.ecr.us-east-1.amazonaws.com/test1",
+    "cpu": 10,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 8000,
+        "hostPort": 8000
+      }
+    ]
+  }
+]
