@@ -1,13 +1,13 @@
 [
   {
-    "name": "nginx",
-    "image": "nginx",
+    "name": "customContainer",
+    "image": "382602106037.dkr.ecr.us-east-1.amazonaws.com/test1:latest",
     "cpu": 128,
     "memory": 32,
     "essential": true,
     "portMappings": [
       {
-        "containerPort": 80,
+        "containerPort": 8000,
         "hostPort": 80
       },
       {

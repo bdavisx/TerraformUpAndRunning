@@ -192,8 +192,8 @@ resource "aws_ecs_service" "web" {
 
   load_balancer {
     elb_name = "${aws_elb.web.id}"
-    container_name = "nginx"
-    container_port = 80
+    container_name = "customContainer"
+    container_port = 8000
   }
 }
 
