@@ -70,8 +70,8 @@ resource "aws_iam_role_policy_attachment" "ecsInstanceRole" {
 }
 
 
-data "template_file" "user_data" {
-  template = "${file("user_data.sh")}"
+data "template_file" "cluster_ecs_config_data" {
+  template = "${file("cluster_ecs_config_data.sh")}"
   vars {
     ecs_cluster = "${aws_ecs_cluster.ecs_cluster.name}"
   }
@@ -87,7 +87,7 @@ resource "aws_launch_configuration" "docker_launch_cfg" {
   associate_public_ip_address = true
   enable_monitoring = false
   ebs_optimized = "false"
-  user_data = "${data.template_file.user_data.rendered}"
+  user_data = "${data.template_file.cluster_ecs_config_data.rendered}"
 
   iam_instance_profile = "${aws_iam_role.ecsInstanceRole.name}"
 
